@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
+It contains the design from the figma link (https://www.figma.com/file/4xv1J0UO79SH4SEUuKNwZl/Frontend-Practical-Task?node-id=0-1&t=L64VQN0PWmYas6E1-0)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
