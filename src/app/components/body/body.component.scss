@@ -1,0 +1,300 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "heading heading heading"
+    "htext htext htext"
+    "page-image page-image page-image"
+    "btext btext btext"
+    "himage himage himage"
+  ;
+  margin: 4rem;
+  margin-top: 1rem;
+  gap: 2rem;
+  font-size: var(--body-text);
+
+  .heading {
+    display: grid;
+    grid-area: heading;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "a h b"
+    ;
+  }
+
+  .text {
+    display: grid;
+    grid-area: htext;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "c t d"
+    ;
+  }
+
+  .page-image {
+    display: grid;
+    grid-area: page-image;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .btext {
+    grid-area: btext;
+    display: grid;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+
+    .date-parent {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 50px auto auto;
+
+      .date {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        align-self: flex-end;
+      }
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 50px auto auto;
+
+      .bottom-text {
+        margin-top: 2rem;
+      }
+    }
+
+
+  }
+
+  .himage {
+    display: grid;
+    grid-area: himage;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "basket study"
+      "setting setting"
+      "light empty"
+    ;
+    gap: 1.5rem;
+
+    .basket {
+      grid-area: basket;
+    }
+
+    .setting {
+      grid-area: setting;
+    }
+
+    .light {
+      grid-area: light;
+    }
+
+    .empty {
+      grid-area: empty;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .h {
+    grid-area: h;
+    letter-spacing: 2px;
+  }
+
+  .t {
+    grid-area: t;
+    text-align: center;
+    color: var(--black)
+  }
+
+  .a {
+    grid-area: a;
+  }
+
+  .b {
+    grid-area: b;
+  }
+
+  .c {
+    grid-area: c;
+  }
+
+  .d {
+    grid-area: d;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--title-1);
+    padding: 0;
+    margin: 0;
+    color: var(--black)
+  }
+
+  h3 {
+    color: var(--primary-black);
+    margin-bottom: 1.5rem;
+    font-size: var(--title-3);
+  }
+
+  div {
+    color: var(--text-black);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "heading heading heading"
+      "htext htext htext"
+      "page-image page-image page-image"
+      "btext btext btext"
+      "himage himage himage"
+    ;
+    margin: 4rem;
+    margin-top: 1rem;
+    gap: 2rem;
+
+    .heading {
+      display: grid;
+      grid-area: heading;
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "a h b"
+      ;
+    }
+
+    .text {
+      display: grid;
+      grid-area: htext;
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "c t d"
+      ;
+    }
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "heading heading heading"
+      "htext htext htext"
+      "page-image page-image page-image"
+      "btext btext btext"
+      "himage himage himage"
+    ;
+    margin: 2rem;
+    margin-top: 1rem;
+    gap: 2rem;
+
+    .heading {
+      display: grid;
+      grid-area: heading;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "h h h"
+      ;
+    }
+
+    .text {
+      display: grid;
+      grid-area: htext;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "t t t"
+      ;
+    }
+
+    .page-image {
+      display: grid;
+      grid-area: page-image;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .btext {
+      grid-area: btext;
+      display: grid;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      grid-template-columns: 2fr;
+      grid-template-rows: auto;
+      gap: 1.5rem;
+
+      .date-parent {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50px auto auto;
+
+        .date {
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          align-self: flex-end;
+        }
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50px auto auto;
+
+        .bottom-text {
+          margin-top: 2rem;
+        }
+      }
+
+
+    }
+
+    .himage {
+      display: grid;
+      grid-area: himage;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      justify-content: center;
+      grid-template-areas:
+        "basket"
+        "study"
+        "setting"
+        "light"
+        "empty"
+      ;
+      gap: 0rem;
+      row-gap: 1rem;
+
+    }
+  }
+}

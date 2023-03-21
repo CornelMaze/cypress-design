@@ -1,0 +1,182 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "heading contact"
+  ;
+  font-size: var(--body-text);
+  background-color: #2C3878;
+
+  .heading {
+    display: grid;
+    padding-left: 4rem;
+    align-content: center;
+    grid-area: heading;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "a"
+    ;
+  }
+
+  h2 {
+    color: var(--white);
+    font-size: var(--title-2);
+    line-height: var(--line-height-7);
+  }
+
+  .contact {
+    display: grid;
+    padding: 2rem;
+    padding-right: 4rem;
+    line-height: var(--line-height-6);
+    grid-area: contact;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "blank content content content"
+      "blank button button button"
+    ;
+
+    .content {
+      grid-area: content;
+      display: flex;
+      color: var(--black-shade);
+    }
+
+    .d {
+      grid-area: button;
+    }
+
+    button {
+      background-color: var(--white);
+      color: var(--primary-black);
+      padding: .8rem 1.8rem;
+      margin-top: 1rem;
+      border: none;
+      font-size: var(--button-text);
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "heading contact"
+    ;
+    background-color: #2C3878;
+
+    .heading {
+      display: grid;
+      padding-left: 4rem;
+      align-content: center;
+      grid-area: heading;
+      line-height: 2.5rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "a"
+      ;
+    }
+
+    h2 {
+      color: var(--white);
+    }
+
+    .contact {
+      display: grid;
+      padding: 2rem;
+      padding-right: 4rem;
+      grid-area: contact;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "blank content content content content content"
+        "blank button button button button button"
+      ;
+
+      .content {
+        display: content;
+        color: var(--black-shade);
+      }
+
+      button {
+        background-color: var(--white);
+        color: var(--primary-black);
+        padding: .6rem 1.8rem;
+        margin-top: 1rem;
+        border: none;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "heading"
+      "contact"
+    ;
+    background-color: #2C3878;
+
+    .heading {
+      display: grid;
+      padding-left: 2rem;
+      padding-top: 1rem;
+      align-content: center;
+      grid-area: heading;
+      line-height: 2.5rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "a"
+      ;
+    }
+
+    h2 {
+      color: var(--white);
+      padding-right: 2rem;
+    }
+
+    .contact {
+      display: grid;
+      padding: 2rem;
+      grid-area: contact;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "content"
+        "d"
+      ;
+
+      .content {
+        grid-area: content;
+        display: flex;
+        color: var(--black-shade);
+      }
+
+      .d {
+        grid-area: d;
+      }
+
+      button {
+        background-color: var(--white);
+        color: var(--primary-black);
+        padding: .6rem 1.8rem;
+        margin-top: 1rem;
+        border: none;
+      }
+    }
+
+  }
+}

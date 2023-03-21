@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="logo l" (click)="toggleNav()">
+    <img src="../../../assets/logo.png" alt="" class="img" />
+    <div class="toggleBar">
+      <img
+        [ngClass]="showNav ? '' : 'navbar'"
+        src="../../../assets/close-outline.svg"
+        alt=""
+      />
+      <img
+        [ngClass]="showNav ? 'navbar' : ''"
+        src="../../../assets/reorder-four-outline.svg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="nav s">
+    <ul [ngClass]="showNav ? 'square' : 'navbar'">
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Services</li>
+      <li class="bold">Our Teams</li>
+      <li class="active">Contact Us</li>
+    </ul>
+  </div>
+</div>
