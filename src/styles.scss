@@ -40,7 +40,10 @@ h5 {
   --line-height-7: 170%;
 }
 
-@media screen and (min-width: 1440px) {
+
+
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
   :root {
     --title-1: 56px;
     --title-2: 36px;
@@ -53,7 +56,8 @@ h5 {
   }
 }
 
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   :root {
     --title-1: 38px;
     --title-2: 30px;
@@ -66,7 +70,8 @@ h5 {
   }
 }
 
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   :root {
     --title-1: 34px;
     --title-2: 26px;
