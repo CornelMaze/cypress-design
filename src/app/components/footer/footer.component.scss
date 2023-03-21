@@ -98,13 +98,18 @@
           span {
             display: flex;
             justify-content: center;
-            border-radius: 80%;
-            padding: 10px;
-            background-color: var(--black-shade);
+            cursor: pointer;
 
-            img {
-              width: 18px;
+            span {
+              border-radius: 80%;
+              padding: 4px;
+              background-color: var(--black-shade);
+
+              img {
+                width: 18px;
+              }
             }
+
           }
         }
       }
@@ -229,12 +234,15 @@
             span {
               display: flex;
               justify-content: center;
-              border-radius: 80px;
-              padding: 8px;
-              background-color: var(--black-shade);
 
-              img {
-                width: 18px;
+              span {
+                border-radius: 80%;
+                padding: 4px;
+                background-color: var(--black-shade);
+
+                img {
+                  width: 18px;
+                }
               }
             }
           }

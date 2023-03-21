@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  showNav = true;
+  showNav = false;
 
   toggleNav() {
     this.showNav = !this.showNav;
